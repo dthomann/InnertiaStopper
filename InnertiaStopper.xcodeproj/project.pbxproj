@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F26300692D0C77BE00D0B616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F263004F2D0C77BD00D0B616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F26300562D0C77BD00D0B616;
+			remoteInfo = InnertiaStopper;
+		};
+		F26300732D0C77BE00D0B616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F263004F2D0C77BD00D0B616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F26300562D0C77BD00D0B616;
+			remoteInfo = InnertiaStopper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F26300572D0C77BD00D0B616 /* InnertiaStopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnertiaStopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F26300682D0C77BE00D0B616 /* InnertiaStopperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InnertiaStopperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F26300722D0C77BE00D0B616 /* InnertiaStopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InnertiaStopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F26300592D0C77BD00D0B616 /* InnertiaStopper */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InnertiaStopper;
+			sourceTree = "<group>";
+		};
+		F263006B2D0C77BE00D0B616 /* InnertiaStopperTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InnertiaStopperTests;
+			sourceTree = "<group>";
+		};
+		F26300752D0C77BE00D0B616 /* InnertiaStopperUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InnertiaStopperUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F26300542D0C77BD00D0B616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F26300652D0C77BE00D0B616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F263006F2D0C77BE00D0B616 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F263004E2D0C77BD00D0B616 = {
+			isa = PBXGroup;
+			children = (
+				F26300592D0C77BD00D0B616 /* InnertiaStopper */,
+				F263006B2D0C77BE00D0B616 /* InnertiaStopperTests */,
+				F26300752D0C77BE00D0B616 /* InnertiaStopperUITests */,
+				F26300582D0C77BD00D0B616 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F26300582D0C77BD00D0B616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F26300572D0C77BD00D0B616 /* InnertiaStopper.app */,
+				F26300682D0C77BE00D0B616 /* InnertiaStopperTests.xctest */,
+				F26300722D0C77BE00D0B616 /* InnertiaStopperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F26300562D0C77BD00D0B616 /* InnertiaStopper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F263007C2D0C77BE00D0B616 /* Build configuration list for PBXNativeTarget "InnertiaStopper" */;
+			buildPhases = (
+				F26300532D0C77BD00D0B616 /* Sources */,
+				F26300542D0C77BD00D0B616 /* Frameworks */,
+				F26300552D0C77BD00D0B616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F26300592D0C77BD00D0B616 /* InnertiaStopper */,
+			);
+			name = InnertiaStopper;
+			packageProductDependencies = (
+			);
+			productName = InnertiaStopper;
+			productReference = F26300572D0C77BD00D0B616 /* InnertiaStopper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F26300672D0C77BE00D0B616 /* InnertiaStopperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F263007F2D0C77BE00D0B616 /* Build configuration list for PBXNativeTarget "InnertiaStopperTests" */;
+			buildPhases = (
+				F26300642D0C77BE00D0B616 /* Sources */,
+				F26300652D0C77BE00D0B616 /* Frameworks */,
+				F26300662D0C77BE00D0B616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F263006A2D0C77BE00D0B616 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F263006B2D0C77BE00D0B616 /* InnertiaStopperTests */,
+			);
+			name = InnertiaStopperTests;
+			packageProductDependencies = (
+			);
+			productName = InnertiaStopperTests;
+			productReference = F26300682D0C77BE00D0B616 /* InnertiaStopperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F26300712D0C77BE00D0B616 /* InnertiaStopperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F26300822D0C77BE00D0B616 /* Build configuration list for PBXNativeTarget "InnertiaStopperUITests" */;
+			buildPhases = (
+				F263006E2D0C77BE00D0B616 /* Sources */,
+				F263006F2D0C77BE00D0B616 /* Frameworks */,
+				F26300702D0C77BE00D0B616 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F26300742D0C77BE00D0B616 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F26300752D0C77BE00D0B616 /* InnertiaStopperUITests */,
+			);
+			name = InnertiaStopperUITests;
+			packageProductDependencies = (
+			);
+			productName = InnertiaStopperUITests;
+			productReference = F26300722D0C77BE00D0B616 /* InnertiaStopperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F263004F2D0C77BD00D0B616 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					F26300562D0C77BD00D0B616 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					F26300672D0C77BE00D0B616 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = F26300562D0C77BD00D0B616;
+					};
+					F26300712D0C77BE00D0B616 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = F26300562D0C77BD00D0B616;
+					};
+				};
+			};
+			buildConfigurationList = F26300522D0C77BD00D0B616 /* Build configuration list for PBXProject "InnertiaStopper" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F263004E2D0C77BD00D0B616;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F26300582D0C77BD00D0B616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F26300562D0C77BD00D0B616 /* InnertiaStopper */,
+				F26300672D0C77BE00D0B616 /* InnertiaStopperTests */,
+				F26300712D0C77BE00D0B616 /* InnertiaStopperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F26300552D0C77BD00D0B616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F26300662D0C77BE00D0B616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F26300702D0C77BE00D0B616 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F26300532D0C77BD00D0B616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F26300642D0C77BE00D0B616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F263006E2D0C77BE00D0B616 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F263006A2D0C77BE00D0B616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F26300562D0C77BD00D0B616 /* InnertiaStopper */;
+			targetProxy = F26300692D0C77BE00D0B616 /* PBXContainerItemProxy */;
+		};
+		F26300742D0C77BE00D0B616 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F26300562D0C77BD00D0B616 /* InnertiaStopper */;
+			targetProxy = F26300732D0C77BE00D0B616 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F263007A2D0C77BE00D0B616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F263007B2D0C77BE00D0B616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F263007D2D0C77BE00D0B616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InnertiaStopper/InnertiaStopper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"InnertiaStopper/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DT.InnertiaStopper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F263007E2D0C77BE00D0B616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = InnertiaStopper/InnertiaStopper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"InnertiaStopper/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DT.InnertiaStopper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F26300802D0C77BE00D0B616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DT.InnertiaStopperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InnertiaStopper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InnertiaStopper";
+			};
+			name = Debug;
+		};
+		F26300812D0C77BE00D0B616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DT.InnertiaStopperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InnertiaStopper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/InnertiaStopper";
+			};
+			name = Release;
+		};
+		F26300832D0C77BE00D0B616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DT.InnertiaStopperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = InnertiaStopper;
+			};
+			name = Debug;
+		};
+		F26300842D0C77BE00D0B616 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = DT.InnertiaStopperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = InnertiaStopper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F26300522D0C77BD00D0B616 /* Build configuration list for PBXProject "InnertiaStopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F263007A2D0C77BE00D0B616 /* Debug */,
+				F263007B2D0C77BE00D0B616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F263007C2D0C77BE00D0B616 /* Build configuration list for PBXNativeTarget "InnertiaStopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F263007D2D0C77BE00D0B616 /* Debug */,
+				F263007E2D0C77BE00D0B616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F263007F2D0C77BE00D0B616 /* Build configuration list for PBXNativeTarget "InnertiaStopperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F26300802D0C77BE00D0B616 /* Debug */,
+				F26300812D0C77BE00D0B616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F26300822D0C77BE00D0B616 /* Build configuration list for PBXNativeTarget "InnertiaStopperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F26300832D0C77BE00D0B616 /* Debug */,
+				F26300842D0C77BE00D0B616 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F263004F2D0C77BD00D0B616 /* Project object */;
+}
