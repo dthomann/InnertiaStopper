@@ -1,24 +1,16 @@
-//
-//  ContentView.swift
-//  InnertiaStopper
-//
-//  Created by Dominik Thomann (privat) on 13.12.2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Global Scroll Control")
+                .font(.largeTitle)
+                .padding()
+            Text("Scroll suppression is active. Move the mouse or use the wheel to test.")
+                .multilineTextAlignment(.center)
+                .padding()
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
-#Preview {
-    ContentView()
-}
