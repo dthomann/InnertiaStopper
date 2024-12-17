@@ -1,121 +1,114 @@
-//
-//  AppDelegate.swift
-//  InnertiaStopper
-//
-//  Created by Dominik Thomann (privat) on 13.12.2024.
-//
-
 import Cocoa
 import Quartz
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var lastMousePosition: NSPoint?
-    var isMouseMoving: Bool = false
-    var suppressionTimer: Timer?
-    var wheelSuppressionTimer: Timer?
-    var isWheelSpinning: Bool = false
-    let movementThreshold: CGFloat = 5.0  // Minimum movement to trigger suppression
+    var initialMousePosition: NSPoint?      // Mouse position when wheel started
+    var isWheelSpinning: Bool = false       // Indicates if the wheel is currently spinning
+    var wheelSuppressionTimer: Timer?       // Timer to reset wheel suppression state
+    var maxSuppressionFactor: Double = 1.0  // Tracks the highest suppression factor reached
+
+    let movementThreshold: CGFloat = 5.0     // Minimum movement to trigger slowdown
+    let maxMovementThreshold: CGFloat = 150.0 // Movement after which scrolling is fully suppressed
     var eventTap: CFMachPort?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         if !AXIsProcessTrusted() {
-            print("Accessibility permissions are required for this app to function properly.")
             let alert = NSAlert()
             alert.messageText = "Accessibility Permissions Required"
-            alert.informativeText = "This app requires Accessibility permissions to control and monitor input events. Please enable them in System Settings > Privacy & Security > Accessibility."
+            alert.informativeText = "Enable Accessibility permissions for this app in System Settings > Privacy & Security > Accessibility."
             alert.alertStyle = .warning
             alert.runModal()
         }
 
-        // Start mouse movement monitoring
-        monitorMouseMovement()
-
-        // Set up global event tap
         setupGlobalEventTap()
     }
 
-    func monitorMouseMovement() {
-        NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { [weak self] event in
-            guard let self = self else { return }
-
-            let currentMousePosition = NSEvent.mouseLocation  // Global position
-            if let lastPosition = self.lastMousePosition {
-                let distance = hypot(currentMousePosition.x - lastPosition.x,
-                                     currentMousePosition.y - lastPosition.y)
-
-                if distance > self.movementThreshold {
-                    self.isMouseMoving = true
-                    print("Mouse is moving!")
-                    self.startMouseSuppressionTimer()
-                } else {
-                    print("Mouse moved, but below threshold (\(distance)).")
-                }
-            }
-            self.lastMousePosition = currentMousePosition
-        }
-    }
-
-    func startMouseSuppressionTimer() {
-        suppressionTimer?.invalidate()  // Cancel any existing timer
-        suppressionTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { [weak self] _ in
-            self?.isMouseMoving = false
-            print("Mouse stopped moving.")
-        }
-    }
-
     func startWheelSuppressionTimer() {
-        wheelSuppressionTimer?.invalidate()  // Cancel any existing timer
+        wheelSuppressionTimer?.invalidate()
         wheelSuppressionTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
-            self?.isWheelSpinning = false
-            print("Mouse wheel stopped spinning.")
+            self?.resetScrollSuppression()
+            print("Mouse wheel stopped spinning. Suppression reset.")
         }
+    }
+
+    func resetScrollSuppression() {
+        isWheelSpinning = false
+        maxSuppressionFactor = 1.0  // Reset suppression factor
+        initialMousePosition = nil  // Reset initial mouse position
     }
 
     func setupGlobalEventTap() {
-            let mask: CGEventMask = (1 << CGEventType.scrollWheel.rawValue)
+        let mask: CGEventMask = (1 << CGEventType.scrollWheel.rawValue)
+        let refcon = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
 
-            // Pass self as refcon to the callback
-            let refcon = UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque())
+        eventTap = CGEvent.tapCreate(
+            tap: .cgSessionEventTap,
+            place: .headInsertEventTap,
+            options: .defaultTap,
+            eventsOfInterest: mask,
+            callback: { (proxy, type, event, refcon) -> Unmanaged<CGEvent>? in
+                guard let refcon = refcon else { return Unmanaged.passUnretained(event) }
+                let appDelegate = Unmanaged<AppDelegate>.fromOpaque(refcon).takeUnretainedValue()
 
-            eventTap = CGEvent.tapCreate(
-                tap: .cgSessionEventTap,
-                place: .headInsertEventTap,
-                options: .defaultTap,
-                eventsOfInterest: mask,
-                callback: { (proxy, type, event, refcon) -> Unmanaged<CGEvent>? in
-                    // Retrieve the AppDelegate instance from refcon
-                    guard let refcon = refcon else { return Unmanaged.passUnretained(event) }
-                    let appDelegate = Unmanaged<AppDelegate>.fromOpaque(refcon).takeUnretainedValue()
+                // Capture scroll event details
+                let deltaY = event.getDoubleValueField(.scrollWheelEventDeltaAxis1)
 
-                    // Use the AppDelegate instance for logic
-                    if appDelegate.isMouseMoving || appDelegate.isWheelSpinning {
-                        print("Scroll event suppressed globally.")
-                        appDelegate.startWheelSuppressionTimer()  // Reset wheel suppression timer
-                        appDelegate.isWheelSpinning = true
-                        return nil  // Discard the event
-                    }
+                // Handle wheel start
+                if !appDelegate.isWheelSpinning {
+                    appDelegate.isWheelSpinning = true
+                    appDelegate.initialMousePosition = NSEvent.mouseLocation  // Capture initial mouse position
+                    print("Wheel started spinning. Initial mouse position: \(String(describing: appDelegate.initialMousePosition))")
+                }
 
-                    print("Scroll event allowed.")
+                // Calculate total movement relative to the initial position
+                guard let initialPosition = appDelegate.initialMousePosition else {
                     return Unmanaged.passUnretained(event)
-                },
-                userInfo: refcon
-            )
+                }
 
-            guard let eventTap = eventTap else {
-                print("Failed to create event tap.")
-                return
-            }
+                let currentMousePosition = NSEvent.mouseLocation
+                let distance = hypot(currentMousePosition.x - initialPosition.x,
+                                     currentMousePosition.y - initialPosition.y)
 
-            let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
-            CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
-            CGEvent.tapEnable(tap: eventTap, enable: true)
-            print("Event tap successfully set up.")
+                if distance > appDelegate.movementThreshold {
+                    if distance >= appDelegate.maxMovementThreshold {
+                        // Fully suppress scrolling
+                        print("Scroll fully suppressed. Distance: \(distance)")
+                        appDelegate.startWheelSuppressionTimer()
+                        return nil
+                    } else {
+                        // Gradually slow down scroll based on the maximum suppression factor
+                        let reductionFactor = max(0.0, 1.0 - (distance / appDelegate.maxMovementThreshold))
+                        appDelegate.maxSuppressionFactor = min(appDelegate.maxSuppressionFactor, reductionFactor)
+
+                        let adjustedDeltaY = deltaY * appDelegate.maxSuppressionFactor
+                        event.setDoubleValueField(.scrollWheelEventDeltaAxis1, value: adjustedDeltaY)
+                        print("Scroll slowed. Distance: \(distance), Reduction Factor: \(appDelegate.maxSuppressionFactor)")
+                    }
+                }
+
+                // Start suppression timer to detect wheel stop
+                appDelegate.startWheelSuppressionTimer()
+
+                return Unmanaged.passUnretained(event)
+            },
+            userInfo: refcon
+        )
+
+        guard let eventTap = eventTap else {
+            print("Failed to create event tap.")
+            return
         }
 
+        let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
+        CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
+        CGEvent.tapEnable(tap: eventTap, enable: true)
+        print("Event tap successfully set up.")
+    }
+
     func applicationWillTerminate(_ notification: Notification) {
-        // Clean up the event tap
         if let eventTap = eventTap {
             CFMachPortInvalidate(eventTap)
         }
     }
 }
+
