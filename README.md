@@ -4,8 +4,8 @@
 
 ## Overview
 Challenge: 
-When you use an external mouse with a Mac and spin the scroll wheel
- to quickly scroll through a large document or 
+On my Mac with an external mouse I often spin the scroll wheel and then let the wheel go so it continuous spinning.
+This is super useful to quickly scroll through a large document or web page. But if you then move the mouse to a different context it continues scrolling. This is often unwanted ()
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,5 +15,5 @@ When you use an external mouse with a Mac and spin the scroll wheel
 - [Contact](#contact)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMzc1OTg5OCwtMTc0MjEzMTU1XX0=
+eyJoaXN0b3J5IjpbNTY5MDk0NjYxLC0xNzQyMTMxNTVdfQ==
 -->
