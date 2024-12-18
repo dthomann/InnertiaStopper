@@ -12,8 +12,7 @@ Do you have an external mouse and let the scroll wheel spinning? This is super u
 Best you build it directly in Xcode. The app requires special  accessibility permission, as it monitors low level mouse events. It will ask the first time you use it.
 Note: If you make changes to the code and rebuild it, you will need to delete the permissions and then allow again.
 
-- [Contact](#contact)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTQxNTY5LC0xNzQyMTMxNTVdfQ==
+eyJoaXN0b3J5IjpbODAwMTkxOTYwLC0xNzQyMTMxNTVdfQ==
 -->
