@@ -1,8 +1,12 @@
 
 
 # InnertiaStopper
+
 ## Overview
-When you use an external mouse with a Mac
+Challenge: 
+When you use an external mouse with a Mac and spin the scroll wheel
+ to quickly scroll through a large document or 
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
@@ -11,5 +15,5 @@ When you use an external mouse with a Mac
 - [Contact](#contact)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTM1NTI5NiwtMTc0MjEzMTU1XX0=
+eyJoaXN0b3J5IjpbMTIyMzc1OTg5OCwtMTc0MjEzMTU1XX0=
 -->
