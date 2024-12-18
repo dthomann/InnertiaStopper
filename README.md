@@ -1,7 +1,7 @@
 
 
-InntertiaStopper
-> Written with [StackEdit](https://stackedit.io/).
+**InntertiaStopper**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDIxMzE1NV19
+eyJoaXN0b3J5IjpbNTYxOTM2MjcxLC0xNzQyMTMxNTVdfQ==
 -->
